@@ -4,6 +4,7 @@ import imgGeneric from '../assets/product-generic.svg'
 import imgOmega from '../assets/product-omega.svg'
 import imgProbiotic from '../assets/product-probiotic.svg'
 import imgCollagen from '../assets/product-collagen.svg'
+import imgPet from '../assets/product-pet.svg'
 
 export const PRODUCTS: Product[] = [
   {
@@ -69,6 +70,38 @@ export const PRODUCTS: Product[] = [
     ingredients: ['Hydrolyzed Collagen Peptides (Bovine)'],
     highlights: ['Unflavored', 'Dissolves quickly', 'No fillers'],
     caution: 'Contains bovine-derived ingredients.',
+  },
+  {
+    id: 'p5',
+    slug: 'pet-omega-3',
+    name: 'Pet Omega-3',
+    subtitle: 'For skin & coat support (cats and dogs)',
+    price: 24.9,
+    currency: 'SGD',
+    size: '60 soft chews',
+    tags: ['Pets', 'Omega-3'],
+    imageSrc: imgPet,
+    description:
+      'A pet-friendly omega-3 supplement designed for daily routines. Supports healthy skin and a shiny coat for cats and dogs.',
+    ingredients: ['Fish Oil', 'Vitamin E', 'Natural Flavor'],
+    highlights: ['Soft chew format', 'Great for picky eaters', 'Easy daily use'],
+    caution: 'For pets only. Consult a veterinarian before use, especially if your pet has medical conditions.',
+  },
+  {
+    id: 'p6',
+    slug: 'pet-probiotic',
+    name: 'Pet Probiotic',
+    subtitle: 'Digestive support for pets',
+    price: 22.0,
+    currency: 'SGD',
+    size: '30 sachets',
+    tags: ['Pets', 'Gut', 'Probiotic'],
+    imageSrc: imgPet,
+    description:
+      'A gentle probiotic blend for pets to support digestive comfort. Designed to be sprinkled over food.',
+    ingredients: ['Lactobacillus', 'Bifidobacterium', 'Prebiotic Fiber'],
+    highlights: ['Easy-to-mix sachets', 'Daily gut support', 'No added sugar'],
+    caution: 'For pets only. If symptoms persist, consult a veterinarian.',
   },
 ]
 

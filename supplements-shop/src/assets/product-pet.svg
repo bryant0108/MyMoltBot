@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Pet supplement illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#dcfce7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="400" rx="28" fill="url(#bg)"/>
+
+  <circle cx="520" cy="100" r="58" fill="#e0f2fe" opacity="0.8"/>
+  <circle cx="140" cy="310" r="78" fill="#ffedd5" opacity="0.75"/>
+
+  <!-- Bottle -->
+  <ellipse cx="320" cy="330" rx="150" ry="22" fill="#0f172a" opacity="0.07"/>
+  <rect x="235" y="88" width="170" height="64" rx="18" fill="#0f172a" opacity="0.92"/>
+  <rect x="212" y="142" width="216" height="190" rx="44" fill="#ffffff" stroke="#e2e8f0" stroke-width="4"/>
+
+  <!-- Label -->
+  <rect x="235" y="198" width="170" height="102" rx="18" fill="#065f46" opacity="0.95"/>
+  <rect x="255" y="220" width="98" height="10" rx="5" fill="#d1fae5" opacity="0.95"/>
+  <rect x="255" y="242" width="130" height="10" rx="5" fill="#a7f3d0" opacity="0.95"/>
+  <rect x="255" y="264" width="76" height="10" rx="5" fill="#a7f3d0" opacity="0.95"/>
+
+  <!-- Paw icon -->
+  <g transform="translate(368,228)" fill="#d1fae5" opacity="0.95">
+    <circle cx="16" cy="8" r="7"/>
+    <circle cx="34" cy="12" r="7"/>
+    <circle cx="10" cy="26" r="7"/>
+    <circle cx="30" cy="28" r="7"/>
+    <path d="M18 44c-10 0-18-7-18-15 0-6 5-10 12-10 6 0 10 3 14 3 4 0 8-3 14-3 7 0 12 4 12 10 0 8-8 15-18 15-6 0-8-2-10-2s-4 2-10 2z"/>
+  </g>
+
+  <g fill="#0f172a" opacity="0.8">
+    <text x="320" y="360" text-anchor="middle" font-size="18" font-family="ui-sans-serif, system-ui">Pet-friendly placeholder (SVG)</text>
+  </g>
+</svg>

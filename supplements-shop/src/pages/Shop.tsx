@@ -5,7 +5,7 @@ import { PRODUCTS } from '../data/products'
 import { formatMoney } from '../lib/money'
 import { Badge, Button, Card, CardBody, Container, Input, Label, Select } from '../components/ui'
 
-type TagFilter = 'All' | 'Vitamins' | 'Omega-3' | 'Gut' | 'Beauty' | 'Daily' | 'Heart' | 'Protein' | 'Probiotic'
+type TagFilter = 'All' | 'Vitamins' | 'Omega-3' | 'Gut' | 'Beauty' | 'Daily' | 'Heart' | 'Protein' | 'Probiotic' | 'Pets'
 
 function ProductCard({ p, onAdd }: { p: Product; onAdd: () => void }) {
   return (
@@ -93,7 +93,7 @@ export function Shop({ onAddToCart }: { onAddToCart: (productId: string) => void
           <div>
             <Label>Tag</Label>
             <Select value={tag} onChange={(e) => setTag(e.target.value as TagFilter)}>
-              {['All', 'Vitamins', 'Omega-3', 'Gut', 'Beauty', 'Daily', 'Heart', 'Protein', 'Probiotic'].map((t) => (
+              {['All', 'Vitamins', 'Omega-3', 'Gut', 'Beauty', 'Daily', 'Heart', 'Protein', 'Probiotic', 'Pets'].map((t) => (
                 <option key={t} value={t}>
                   {t}
                 </option>
