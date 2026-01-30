@@ -42,27 +42,27 @@ export function TransactionForm({
 
   return (
     <Card>
-      <CardHeader title="新增記帳" subtitle="資料會儲存在你的瀏覽器（localStorage）" />
+      <CardHeader title="Add transaction" subtitle="Data is stored in your browser (localStorage)" />
       <CardBody>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div>
-            <Label>類型</Label>
+            <Label>Type</Label>
             <Select value={type} onChange={(e) => setType(e.target.value as TxType)}>
-              <option value="expense">支出</option>
-              <option value="income">收入</option>
+              <option value="expense">Expense</option>
+              <option value="income">Income</option>
             </Select>
           </div>
 
           <div>
-            <Label>日期</Label>
+            <Label>Date</Label>
             <Input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
           </div>
 
           <div>
-            <Label>金額（{currency}）</Label>
+            <Label>Amount ({currency})</Label>
             <Input
               inputMode="decimal"
-              placeholder="例如 12.50"
+              placeholder="e.g. 12.50"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               onKeyDown={(e) => {
@@ -72,7 +72,7 @@ export function TransactionForm({
           </div>
 
           <div>
-            <Label>分類</Label>
+            <Label>Category</Label>
             <Select value={category} onChange={(e) => setCategory(e.target.value)}>
               {categories.map((c) => (
                 <option key={c} value={c}>
@@ -83,8 +83,8 @@ export function TransactionForm({
           </div>
 
           <div className="md:col-span-2">
-            <Label>備註（可選）</Label>
-            <Input placeholder="例如：午餐、計程車" value={note} onChange={(e) => setNote(e.target.value)} />
+            <Label>Note (optional)</Label>
+            <Input placeholder="e.g. lunch, taxi" value={note} onChange={(e) => setNote(e.target.value)} />
           </div>
 
           <div className="md:col-span-2 flex items-center justify-end gap-2">
@@ -94,7 +94,7 @@ export function TransactionForm({
               disabled={!amount || Number(amount) <= 0}
               className="disabled:cursor-not-allowed disabled:opacity-60"
             >
-              新增
+              Add
             </Button>
           </div>
         </div>

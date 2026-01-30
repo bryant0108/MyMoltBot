@@ -39,34 +39,34 @@ export function TransactionList({
 
   return (
     <Card>
-      <CardHeader title="明細" subtitle={`${transactions.length} 筆（可搜尋、可篩選）`} />
+      <CardHeader title="Transactions" subtitle={`${transactions.length} items (search & filter)`} />
       <CardBody>
         <div className="mb-4 grid grid-cols-1 gap-3 md:grid-cols-3">
           <div>
-            <Label>篩選</Label>
+            <Label>Filter</Label>
             <Select value={filterType} onChange={(e) => setFilterType(e.target.value as FilterType)}>
-              <option value="all">全部</option>
-              <option value="expense">支出</option>
-              <option value="income">收入</option>
+              <option value="all">All</option>
+              <option value="expense">Expense</option>
+              <option value="income">Income</option>
             </Select>
           </div>
           <div className="md:col-span-2">
-            <Label>搜尋</Label>
-            <Input placeholder="輸入分類 / 備註 / 日期" value={query} onChange={(e) => setQuery(e.target.value)} />
+            <Label>Search</Label>
+            <Input placeholder="Category / note / date" value={query} onChange={(e) => setQuery(e.target.value)} />
           </div>
         </div>
 
         {filtered.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-slate-200 bg-white px-4 py-8 text-center text-sm text-slate-500">
-            沒有符合條件的資料
+            No matching records
           </div>
         ) : (
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
             <div className="grid grid-cols-12 gap-0 border-b border-slate-100 bg-slate-50 px-4 py-2 text-xs font-medium text-slate-600">
-              <div className="col-span-3">日期</div>
-              <div className="col-span-3">分類</div>
-              <div className="col-span-4">備註</div>
-              <div className="col-span-2 text-right">金額</div>
+              <div className="col-span-3">Date</div>
+              <div className="col-span-3">Category</div>
+              <div className="col-span-4">Note</div>
+              <div className="col-span-2 text-right">Amount</div>
             </div>
             <ul className="divide-y divide-slate-100">
               {filtered.map((t) => {
@@ -77,7 +77,7 @@ export function TransactionList({
                     <div className="col-span-3 text-sm text-slate-700">{fmtDate(t.date)}</div>
                     <div className="col-span-3 text-sm font-medium text-slate-900">{t.category}</div>
                     <div className="col-span-4 truncate text-sm text-slate-600" title={t.note}>
-                      {t.note || <span className="text-slate-400">（無）</span>}
+                      {t.note || <span className="text-slate-400">(none)</span>}
                     </div>
                     <div className={'col-span-2 text-right text-sm font-semibold ' + amountCls}>
                       {sign}
@@ -90,10 +90,10 @@ export function TransactionList({
                         variant="secondary"
                         className="h-8 px-2 text-xs"
                         onClick={() => {
-                          if (confirm('確定要刪除這筆記錄嗎？')) onDelete(t.id)
+                          if (confirm('Delete this record?')) onDelete(t.id)
                         }}
                       >
-                        刪除
+                        Delete
                       </Button>
                     </div>
                   </li>

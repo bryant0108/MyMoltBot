@@ -25,7 +25,7 @@ export default function App() {
   }
 
   function resetAll() {
-    if (!confirm('確定要清空所有資料嗎？此操作無法復原。')) return
+    if (!confirm('Are you sure you want to clear all data? This cannot be undone.')) return
     setTransactions([])
   }
 
@@ -34,15 +34,15 @@ export default function App() {
       <header className="border-b border-slate-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
           <div>
-            <div className="text-lg font-semibold text-slate-900">MyMolt 記帳</div>
-            <div className="text-sm text-slate-500">簡潔、可手機使用、資料留在本機</div>
+            <div className="text-lg font-semibold text-slate-900">MyMolt Ledger</div>
+            <div className="text-sm text-slate-500">Simple, mobile-friendly, stored locally</div>
           </div>
           <button
             type="button"
             className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
             onClick={resetAll}
           >
-            清空資料
+            Clear data
           </button>
         </div>
       </header>
@@ -56,16 +56,16 @@ export default function App() {
           </div>
           <div className="md:col-span-2">
             <Card>
-              <CardHeader title="設定" subtitle="可先用 SGD；也可改成 TWD / USD 等" />
+              <CardHeader title="Settings" subtitle="Start with SGD, or switch to TWD / USD, etc." />
               <CardBody>
-                <Label>貨幣（ISO 4217，例如 SGD / TWD / USD）</Label>
+                <Label>Currency (ISO 4217, e.g. SGD / TWD / USD)</Label>
                 <Input
                   value={currency}
                   onChange={(e) => setCurrency(e.target.value.toUpperCase().slice(0, 3))}
                   placeholder="SGD"
                 />
                 <div className="mt-3 text-xs text-slate-500">
-                  提示：目前版本只做本機儲存；之後可以加雲端同步、分類管理、匯出 CSV。
+                  Tip: this version stores data locally only. Next we can add cloud sync, category management, or CSV export.
                 </div>
               </CardBody>
             </Card>
@@ -75,7 +75,7 @@ export default function App() {
         <TransactionList currency={currency} transactions={transactions} onDelete={deleteTx} />
 
         <footer className="pt-2 text-center text-xs text-slate-500">
-          建議：若你要跨裝置同步，我可以下一步幫你加「登入 + 雲端資料庫」。
+          Next step: if you want cross-device sync, I can add login + a cloud database.
         </footer>
       </main>
     </div>

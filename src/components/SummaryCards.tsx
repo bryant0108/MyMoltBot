@@ -25,9 +25,9 @@ export function SummaryCards({ currency, transactions }: { currency: string; tra
     <Card>
       <CardBody>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-          <Stat label="收入" value={formatMoney(t.income, currency)} tone="good" />
-          <Stat label="支出" value={formatMoney(t.expense, currency)} tone="bad" />
-          <Stat label="結餘" value={formatMoney(t.net, currency)} tone="neutral" />
+          <Stat label="Income" value={formatMoney(t.income, currency)} tone="good" />
+          <Stat label="Expense" value={formatMoney(t.expense, currency)} tone="bad" />
+          <Stat label="Net" value={formatMoney(t.net, currency)} tone="neutral" />
         </div>
       </CardBody>
     </Card>
