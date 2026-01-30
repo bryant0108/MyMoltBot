@@ -1,5 +1,10 @@
 import type { Product } from '../types'
 
+import imgGeneric from '../assets/product-generic.svg'
+import imgOmega from '../assets/product-omega.svg'
+import imgProbiotic from '../assets/product-probiotic.svg'
+import imgCollagen from '../assets/product-collagen.svg'
+
 export const PRODUCTS: Product[] = [
   {
     id: 'p1',
@@ -10,6 +15,7 @@ export const PRODUCTS: Product[] = [
     currency: 'SGD',
     size: '60 capsules',
     tags: ['Vitamins', 'Daily'],
+    imageSrc: imgGeneric,
     description:
       'A convenient multivitamin designed to complement a modern lifestyle. Formulated for daily use with a broad spectrum of essential vitamins and minerals.',
     ingredients: ['Vitamin A', 'Vitamin C', 'Vitamin D3', 'Vitamin E', 'B-Complex', 'Zinc', 'Magnesium'],
@@ -25,6 +31,7 @@ export const PRODUCTS: Product[] = [
     currency: 'SGD',
     size: '90 softgels',
     tags: ['Omega-3', 'Heart'],
+    imageSrc: imgOmega,
     description:
       'Premium omega-3 concentrate with EPA and DHA sourced from responsibly harvested fish. Supports everyday wellness as part of a balanced diet.',
     ingredients: ['Fish Oil Concentrate', 'EPA', 'DHA', 'Gelatin Capsule'],
@@ -40,6 +47,7 @@ export const PRODUCTS: Product[] = [
     currency: 'SGD',
     size: '30 capsules',
     tags: ['Gut', 'Probiotic'],
+    imageSrc: imgProbiotic,
     description:
       'Multi-strain probiotic blend designed for digestive comfort and everyday gut support. Suitable for daily routine.',
     ingredients: ['Lactobacillus', 'Bifidobacterium', 'Prebiotic Fiber'],
@@ -55,6 +63,7 @@ export const PRODUCTS: Product[] = [
     currency: 'SGD',
     size: '300g powder',
     tags: ['Beauty', 'Protein'],
+    imageSrc: imgCollagen,
     description:
       'Hydrolyzed collagen peptides that dissolve easily into hot or cold beverages. A simple addition to your daily routine.',
     ingredients: ['Hydrolyzed Collagen Peptides (Bovine)'],

@@ -36,7 +36,11 @@ export function ProductDetail({ onAddToCart }: { onAddToCart: (productId: string
           <CardBody>
             <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
               <div className="md:max-w-2xl">
-                <div className="text-2xl font-semibold text-slate-900">{p.name}</div>
+                <div className="overflow-hidden rounded-2xl bg-slate-50 ring-1 ring-slate-100">
+                  <img src={p.imageSrc} alt={p.name} className="h-64 w-full object-cover md:h-72" />
+                </div>
+
+                <div className="mt-5 text-2xl font-semibold text-slate-900">{p.name}</div>
                 <div className="mt-2 text-sm text-slate-600">{p.subtitle}</div>
 
                 <div className="mt-4 flex flex-wrap gap-2">

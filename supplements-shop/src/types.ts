@@ -7,6 +7,7 @@ export type Product = {
   currency: string
   size: string
   tags: string[]
+  imageSrc: string
   description: string
   ingredients: string[]
   highlights: string[]
